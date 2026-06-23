@@ -15,17 +15,33 @@ interface AppRouterProps {
   onAddToCart: (product: Product) => void;
   onRemoveFromCart: (productId: number) => void;
   onDeleteFromCart: (productId: number) => void;
+  favorites: number[];
+  toggleFavorite: (productId: number) => void;
 }
 
-const AppRouter = ({ cart, totalCount, onAddToCart, onRemoveFromCart, onDeleteFromCart }: AppRouterProps) => {
+const AppRouter = ({
+  cart,
+  totalCount,
+  onAddToCart,
+  onRemoveFromCart,
+  onDeleteFromCart,
+}: AppRouterProps) => {
   return (
     <>
       <Header cartCount={totalCount} />
+
       <Routes>
         <Route
           path="/"
-          element={<HomePage onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart} cart={cart} />}
+          element={
+            <HomePage
+              onAddToCart={onAddToCart}
+              onRemoveFromCart={onRemoveFromCart}
+              cart={cart}
+            />
+          }
         />
+
         <Route
           path="/product/:id"
           element={
@@ -36,17 +52,25 @@ const AppRouter = ({ cart, totalCount, onAddToCart, onRemoveFromCart, onDeleteFr
             />
           }
         />
+
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+
         <Route
           path="/cart"
           element={
             <ProtectedRoute>
-              <CartPage cart={cart} onAdd={onAddToCart} onRemove={onRemoveFromCart} onDelete={onDeleteFromCart} />
+              <CartPage
+                cart={cart}
+                onAdd={onAddToCart}
+                onRemove={onRemoveFromCart}
+                onDelete={onDeleteFromCart}
+              />
             </ProtectedRoute>
           }
         />
       </Routes>
+
       <Footer />
     </>
   );
