@@ -1,0 +1,233 @@
+.page { background: #F8F9FC; min-height: 100vh; padding-bottom: 80px; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  padding: 20px 0 24px; font-size: 0.82rem; color: #9CA3AF; flex-wrap: wrap;
+}
+.breadcrumb a { color: #6B7280; text-decoration: none; transition: color 0.18s; }
+.breadcrumb a:hover { color: #4F46E5; }
+.breadcrumb span:not(:first-child):not(:nth-child(even)) { color: #0F172A; font-weight: 500; }
+
+/* Main grid */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  background: white;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  border: 1px solid #F3F4F6;
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) { .main { grid-template-columns: 1fr; gap: 28px; padding: 20px; } }
+
+/* Image col */
+.imageCol { display: flex; flex-direction: column; gap: 14px; }
+
+.imageBox {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F9FAFB;
+  aspect-ratio: 1;
+  cursor: zoom-in;
+}
+.mainImg {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.4s;
+}
+.imageBox:hover .mainImg { transform: scale(1.05); }
+
+.lowStock {
+  position: absolute; bottom: 14px; left: 14px;
+  background: #EF4444; color: white;
+  padding: 6px 14px; border-radius: 20px;
+  font-size: 0.78rem; font-weight: 700;
+}
+
+.thumbRow { display: flex; gap: 10px; }
+.thumb {
+  width: 70px; height: 70px; border-radius: 10px; overflow: hidden;
+  border: 2px solid #E5E7EB; cursor: pointer; transition: border-color 0.2s;
+  flex-shrink: 0;
+}
+.thumb:hover { border-color: #A5B4FC; }
+.thumbActive { border-color: #4F46E5 !important; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Info col */
+.infoCol { display: flex; flex-direction: column; gap: 0; }
+
+.brand {
+  display: inline-block; font-size: 0.72rem; font-weight: 800;
+  color: #6366F1; text-transform: uppercase; letter-spacing: 1px;
+  background: #EEF2FF; padding: 4px 10px; border-radius: 6px;
+  margin-bottom: 10px; width: fit-content;
+}
+
+.title {
+  font-size: 1.7rem; font-weight: 800; color: #0F172A;
+  line-height: 1.2; margin: 0 0 16px; letter-spacing: -0.5px;
+}
+
+.ratingRow { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
+.stars { display: flex; gap: 2px; font-size: 1.1rem; }
+.ratingVal { font-weight: 700; color: #F59E0B; font-size: 0.9rem; }
+.reviewsCount { color: #9CA3AF; font-size: 0.82rem; }
+
+.priceRow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.price { font-size: 1.9rem; font-weight: 900; color: #4F46E5; }
+.oldPrice { font-size: 1rem; color: #CBD5E1; text-decoration: line-through; }
+.discountBadge {
+  background: #FEF2F2; color: #EF4444;
+  font-size: 0.78rem; font-weight: 700;
+  padding: 4px 9px; border-radius: 6px;
+}
+
+.desc { color: #4B5563; font-size: 0.9rem; line-height: 1.75; margin: 0 0 18px; }
+
+.divider { border: none; border-top: 1px solid #F3F4F6; margin: 6px 0 20px; }
+
+/* Purchase row */
+.purchaseRow { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+
+.qtyBox {
+  display: flex; align-items: center;
+  border: 1.5px solid #E5E7EB; border-radius: 10px; overflow: hidden;
+}
+.qtyBox button {
+  width: 40px; height: 44px; border: none; background: #F9FAFB;
+  font-size: 1.2rem; cursor: pointer; color: #4F46E5; font-weight: 700;
+  transition: background 0.15s; font-family: inherit;
+}
+.qtyBox button:hover { background: #EEF2FF; }
+.qtyBox span {
+  padding: 0 16px; font-weight: 700; font-size: 1rem; color: #0F172A;
+  border-left: 1.5px solid #E5E7EB; border-right: 1.5px solid #E5E7EB;
+  min-width: 44px; text-align: center;
+}
+
+.addBtn {
+  flex: 1; padding: 12px 16px; background: #4F46E5; color: white;
+  border: none; border-radius: 10px; font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+}
+.addBtn:hover { background: #4338CA; }
+.addedBtn { background: #10B981 !important; }
+
+.qtyBoxBig {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #EEF2FF;
+  border: 2px solid #4F46E5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.qtyBoxBig button {
+  width: 46px; height: 46px; border: none; background: transparent;
+  color: #4F46E5; font-size: 1.3rem; font-weight: 800; cursor: pointer;
+  transition: background 0.15s; font-family: inherit; flex-shrink: 0;
+}
+.qtyBoxBig button:hover { background: #C7D2FE; }
+.qtyBoxBig span {
+  font-weight: 700; font-size: 0.875rem; color: #4F46E5; text-align: center;
+}
+
+.wishBtn {
+  width: 46px; height: 46px; border-radius: 10px;
+  border: 1.5px solid #E5E7EB; background: white;
+  font-size: 1.2rem; cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.wishBtn:hover { border-color: #FCA5A5; background: #FFF0F0; }
+.wishedBtn { background: #FFF0F0 !important; border-color: #FCA5A5 !important; }
+
+.buyNowBtn {
+  width: 100%; padding: 13px; background: white; color: #4F46E5;
+  border: 2px solid #4F46E5; border-radius: 10px;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer;
+  transition: all 0.2s; font-family: inherit; margin-bottom: 20px;
+}
+.buyNowBtn:hover { background: #EEF2FF; }
+
+/* Badges */
+.badges { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.badge {
+  display: flex; align-items: center; gap: 6px;
+  background: #F8F9FC; border: 1px solid #E5E7EB;
+  border-radius: 8px; padding: 8px 12px;
+  font-size: 0.78rem; color: #4B5563; font-weight: 500;
+}
+
+/* Specs */
+.specs { border: 1px solid #F3F4F6; border-radius: 12px; overflow: hidden; }
+.specRow {
+  display: flex; justify-content: space-between;
+  padding: 10px 14px; font-size: 0.85rem;
+  border-bottom: 1px solid #F9FAFB;
+}
+.specRow:last-child { border-bottom: none; }
+.specRow span:first-child { color: #9CA3AF; font-weight: 500; }
+.specRow span:last-child { color: #374151; font-weight: 600; }
+.inStock { color: #10B981 !important; }
+
+/* Related */
+.related { margin-top: 0; }
+.related h2 { font-size: 1.4rem; font-weight: 800; color: #0F172A; margin: 0 0 20px; }
+
+.relatedGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 768px) { .relatedGrid { grid-template-columns: repeat(2, 1fr); } }
+
+.relatedCard {
+  background: white; border-radius: 14px; overflow: hidden;
+  border: 1.5px solid #F3F4F6; cursor: pointer; transition: all 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.relatedCard:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(79,70,229,0.1); border-color: #C7D2FE; }
+.relatedCard img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.relatedBody { padding: 10px 12px; }
+.relatedTitle {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; font-size: 0.8rem; color: #374151; margin-bottom: 4px; display: block;
+}
+.relatedPrice { font-size: 0.875rem; font-weight: 700; color: #4F46E5; }
+
+/* Loading */
+.loading {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  max-width: 1280px; margin: 40px auto; padding: 0 24px;
+}
+.skeletonImg {
+  aspect-ratio: 1; border-radius: 16px;
+  background: linear-gradient(90deg, #F3F4F6 25%, #EAECEF 50%, #F3F4F6 75%);
+  background-size: 200% 100%; animation: shimmer 1.4s infinite;
+}
+.skeletonLines { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; }
+.skeletonLine {
+  height: 20px; border-radius: 6px;
+  background: linear-gradient(90deg, #F3F4F6 25%, #EAECEF 50%, #F3F4F6 75%);
+  background-size: 200% 100%; animation: shimmer 1.4s infinite;
+}
+
+/* Not found */
+.notFound {
+  text-align: center; padding: 100px 24px;
+}
+.notFound div { font-size: 4rem; margin-bottom: 16px; }
+.notFound h2 { color: #374151; margin-bottom: 20px; }
+.notFound button {
+  padding: 12px 24px; background: #4F46E5; color: white;
+  border: none; border-radius: 10px; font-size: 0.9rem; cursor: pointer; font-family: inherit;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

@@ -1,0 +1,121 @@
+.wrapper { overflow: hidden; }
+
+.wrapper :global(.slick-dots) { bottom: 24px; }
+.wrapper :global(.slick-dots li button:before) {
+  color: rgba(255,255,255,0.6);
+  font-size: 8px;
+}
+.wrapper :global(.slick-dots li.slick-active button:before) {
+  color: white;
+  font-size: 10px;
+}
+
+.slide {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.gradientBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.55;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 70%);
+  z-index: 2;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 120px;
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin: 0 0 12px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.82);
+  margin: 0 0 32px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.ctaRow { display: flex; gap: 12px; align-items: center; }
+
+.ctaPrimary {
+  padding: 14px 32px;
+  background: white;
+  color: #4F46E5;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s;
+  font-family: inherit;
+}
+.ctaPrimary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+
+.ctaSecondary {
+  padding: 14px 24px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.22s;
+  font-family: inherit;
+}
+.ctaSecondary:hover { background: rgba(255,255,255,0.22); }
+
+@media (max-width: 768px) {
+  .slide { height: 360px; }
+  .content { padding: 0 24px; }
+  .title { font-size: 1.9rem; }
+  .subtitle { font-size: 0.9rem; margin-bottom: 24px; }
+  .ctaPrimary, .ctaSecondary { padding: 11px 20px; font-size: 0.875rem; }
+}

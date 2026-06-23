@@ -1,0 +1,87 @@
+.footer { background: #0F172A; color: #94A3B8; }
+
+.top { padding: 56px 0 40px; }
+.bottom {
+  border-top: 1px solid #1E293B;
+  padding: 16px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 48px;
+}
+
+.top .container { align-items: flex-start; }
+.bottom .container {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.brand { flex: 2; max-width: 280px; }
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.brand p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #64748B;
+  margin: 0 0 20px;
+}
+
+.social { display: flex; gap: 8px; }
+.socialBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #1E293B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+.socialBtn:hover { background: #4F46E5; transform: translateY(-2px); }
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 120px;
+}
+.col h4 { color: white; font-size: 0.875rem; font-weight: 700; margin: 0 0 6px; }
+.col a {
+  color: #64748B;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.18s;
+}
+.col a:hover { color: #A5B4FC; }
+
+.contacts { flex: 1.5; display: flex; flex-direction: column; gap: 10px; }
+.contacts h4 { color: white; font-size: 0.875rem; font-weight: 700; margin: 0 0 6px; }
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #64748B;
+}
+
+.payIcons { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: #475569; }
+
+@media (max-width: 900px) {
+  .top .container { flex-wrap: wrap; gap: 28px; }
+  .brand { max-width: 100%; flex: 100%; }
+  .bottom .container { flex-direction: column; gap: 8px; text-align: center; }
+}

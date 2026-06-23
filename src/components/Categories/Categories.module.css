@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  background: white;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: #A5B4FC;
+  background: #F5F3FF;
+  color: #4F46E5;
+}
+
+.active {
+  border-color: #4F46E5 !important;
+  background: #4F46E5 !important;
+  color: white !important;
+}
+
+.icon { font-size: 1rem; }
+
+.name {
+  font-size: 0.875rem;
+  font-weight: 500;
+}

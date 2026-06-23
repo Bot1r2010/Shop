@@ -1,0 +1,102 @@
+{
+  "banners": [
+    {
+      "id": 1,
+      "title": "Yangi Kolleksiya 2024",
+      "subtitle": "Eng yaxshi mahsulotlar sizni kutmoqda",
+      "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200&h=400&fit=crop",
+      "ctaText": "Batafsil ko'rish"
+    },
+    {
+      "id": 2,
+      "title": "Yozgi Chegirmalar — 50%",
+      "subtitle": "Faqat bu hafta katta chegirmalar",
+      "image": "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1200&h=400&fit=crop",
+      "ctaText": "Xarid qilish"
+    },
+    {
+      "id": 3,
+      "title": "Zamonaviy Gadgetlar",
+      "subtitle": "Texnologiyaning eng yaxshi namunalari",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=400&fit=crop",
+      "ctaText": "Ko'rish"
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Elektronika", "icon": "💻" },
+    { "id": 2, "name": "Kiyim", "icon": "👕" },
+    { "id": 3, "name": "Oziq-ovqat", "icon": "🍎" },
+    { "id": 4, "name": "Sport", "icon": "⚽" },
+    { "id": 5, "name": "Uy jihozlari", "icon": "🛋️" },
+    { "id": 6, "name": "Kitoblar", "icon": "📚" },
+    { "id": 7, "name": "O'yinchoqlar", "icon": "🧸" },
+    { "id": 8, "name": "Go'zallik", "icon": "💄" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Apple MacBook Pro 16\"",
+      "price": 18990000,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop",
+      "categoryId": 1,
+      "rating": 4.9
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S24 Ultra",
+      "price": 9990000,
+      "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop",
+      "categoryId": 1,
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "title": "Nike Air Max 270",
+      "price": 1490000,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      "categoryId": 2,
+      "rating": 4.5
+    },
+    {
+      "id": 4,
+      "title": "Adidas Ultraboost 23",
+      "price": 1290000,
+      "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&h=400&fit=crop",
+      "categoryId": 2,
+      "rating": 4.3
+    },
+    {
+      "id": 5,
+      "title": "Sony WH-1000XM5",
+      "price": 3990000,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+      "categoryId": 1,
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "title": "Apple AirPods Pro 2",
+      "price": 3490000,
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+      "categoryId": 1,
+      "rating": 4.6
+    },
+    {
+      "id": 7,
+      "title": "Yoga Mat Professional",
+      "price": 450000,
+      "image": "https://images.unsplash.com/photo-1601925228008-d68da5a36f27?w=400&h=400&fit=crop",
+      "categoryId": 4,
+      "rating": 4.4
+    },
+    {
+      "id": 8,
+      "title": "Apple Watch Series 9",
+      "price": 4990000,
+      "image": "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=400&h=400&fit=crop",
+      "categoryId": 1,
+      "rating": 4.7
+    }
+  ],
+  "users": []
+}
